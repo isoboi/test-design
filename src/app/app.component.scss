@@ -1,0 +1,213 @@
+$card-width: 400px;
+$spacing: 15px;
+$half-spacing: $spacing / 2;
+$border: 1px solid #dddddd;
+$border-radius: 4px;
+$small-text: 0.8em;
+
+$green: #52ba50;
+$red: #da2734;
+$blue: #0a5fd4;
+$yellow: #feda66;
+
+
+.container {
+  width: 100%;
+  max-width: ($card-width + $spacing * 2) * 3;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+}
+
+.card {
+  width: 100%;
+  max-width: $card-width;
+  padding: $spacing;
+  margin: $spacing;
+  border: $border;
+  border-radius: $border-radius;
+
+  .image-container {
+    height: 240px;
+    position: relative;
+    background-size: cover;
+    padding: $spacing;
+    color: #ffffff;
+    margin-bottom: $spacing;
+
+    .icon {
+      height: 20px;
+    }
+
+    .rating {
+      position: absolute;
+      top: $spacing;
+      left: $spacing;
+      background-color: $green;
+      border-radius: 50px;
+      padding: $half-spacing $spacing;
+    }
+
+    .discount {
+      position: absolute;
+      top: $spacing;
+      right: $spacing;
+      background-color: $red;
+      border-radius: $border-radius;
+      padding: $half-spacing;
+    }
+
+    .bottom-container {
+      position: absolute;
+      bottom: $spacing+$half-spacing;
+
+      .stars {
+        .icon {
+          margin-right: 2px;
+        }
+      }
+
+      .title {
+        font-weight: bold;
+        margin: $half-spacing 0;
+      }
+
+      .city {
+        color: #dddddd;
+      }
+    }
+
+    .recommendation {
+      position: absolute;
+      bottom: -$spacing;
+      right: $spacing;
+      padding: $half-spacing $spacing;
+      border-radius: $border-radius;
+      background-color: $green;
+      text-transform: uppercase;
+      font-size: $small-text;
+
+      .icon {
+        margin-right: $half-spacing;
+        vertical-align: sub;
+      }
+    }
+  }
+
+  .date {
+    font-weight: bold;
+  }
+
+  .price-container {
+    border-top: $border;
+    margin: -$spacing;
+    margin-top: $spacing;
+    display: flex;
+    justify-content: space-between;
+
+    .first-price {
+      padding: $spacing;
+
+      .select {
+        display: inline-block;
+        color: $blue;
+        border-bottom: 1px solid;
+      }
+
+      .price {
+        font-weight: bold;
+        margin-top: $spacing;
+        font-size: 1.2em;
+      }
+    }
+
+    .second-price {
+      padding: $spacing;
+      border-left: $border;
+
+      .price {
+        background-color: $red;
+        border-radius: $border-radius;
+        padding: $half-spacing $spacing;
+        color: #ffffff;
+      }
+
+      .count {
+        margin-top: $half-spacing;
+        font-size: $small-text;
+      }
+    }
+  }
+}
+
+.load-more {
+  width: 100%;
+  padding: $spacing;
+  margin: $spacing;
+  border-radius: $border-radius;
+  background-color: $yellow;
+  text-align: center;
+  text-decoration: underline;
+}
+
+.controls {
+  background-color: $blue;
+  display: flex;
+  flex-wrap: wrap;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+
+  .control {
+    flex-grow: 1;
+    width: 33%;
+    text-align: center;
+    border-right: 1px solid #ffffff80;
+    padding: $spacing 0;
+
+    &:last-child {
+      border: 0;
+    }
+
+    .icon {
+      height: 30px;
+      margin-bottom: $half-spacing;
+    }
+
+    .name {
+      color: #ffffff;
+      text-transform: uppercase;
+    }
+
+    .value {
+      color: #ffffff80;
+      font-size: $small-text;
+    }
+  }
+}
+
+@media (min-width: 450px) {
+  .controls {
+    .control {
+      display: flex;
+      justify-content: center;
+
+      .icon {
+        margin-bottom: 0;
+        margin-right: $spacing;
+      }
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  .controls {
+    max-width: 600px;
+    margin: 0 auto;
+    border-radius: $border-radius*2;
+    bottom: $spacing;
+  }
+}

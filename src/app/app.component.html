@@ -1,0 +1,63 @@
+<div class="container">
+  <div class="card" *ngFor="let a of arr">
+    <div class="image-container" [style.background-image]="'url(./assets/img/hotel.png)'">
+      <div class="rating">8.5 / 10</div>
+      <div class="discount">-55%</div>
+      <div class="bottom-container">
+        <div class="stars">
+          <img class="icon" src="./assets/icons/star.svg">
+          <img class="icon" src="./assets/icons/star.svg">
+          <img class="icon" src="./assets/icons/star.svg">
+          <img class="icon" src="./assets/icons/star-empty.svg">
+          <img class="icon" src="./assets/icons/star-empty.svg">
+        </div>
+        <div class="title">BE LIVE COLLECTION CANOA LIVE COLLECTION CANOA 4*</div>
+        <div class="city">Турция, Кемер, 3 линия</div>
+      </div>
+      <div class="recommendation">
+        <img class="icon" src="./assets/icons/like.svg">
+        <span>Рекомендуем</span>
+      </div>
+    </div>
+    <div class="date">7 — 14 ночей</div>
+    <div class="date">Вылеты 26 фев — 04 мар из Алматы</div>
+    <div class="price-container">
+      <div class="first-price">
+        <div class="select">2 взр и 3 реб</div>
+        <div class="price">от 2 958 944 ₸</div>
+      </div>
+      <div class="second-price">
+        <div class="price">458 944 ₸</div>
+        <div class="count">x 24 мес</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container">
+  <div class="load-more">Показать туры (55)</div>
+</div>
+
+<div class="controls">
+  <div class="control">
+    <img class="icon" src="./assets/icons/search.svg">
+    <div class="text-container">
+      <div class="name">Поиск</div>
+      <div class="value">по отелю</div>
+    </div>
+  </div>
+  <div class="control">
+    <img class="icon" src="./assets/icons/filter.svg">
+    <div class="text-container">
+      <div class="name">Фильтры</div>
+      <div class="value">не выбранно</div>
+    </div>
+  </div>
+  <div class="control">
+    <img class="icon" src="./assets/icons/sort.svg">
+    <div class="text-container">
+      <div class="name">Сортировка</div>
+      <div class="value">сначала дешевле</div>
+    </div>
+  </div>
+</div>
